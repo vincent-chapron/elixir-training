@@ -21,4 +21,8 @@ defmodule Cards do
   def contains?(deck, card) do
     Enum.member?(deck, card)
   end
+
+  def deal(deck, hand_size) do
+    Enum.split(deck, hand_size) # pattern matching : { hand, the_rest } = Cards.deal(deck, 2)
+  end
 end
